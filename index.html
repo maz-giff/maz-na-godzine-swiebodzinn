@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Profesjonalna pomoc domowa w Świebodzinie. Naprawy, montaż mebli, instalacje elektryczne i hydrauliczne.">
+<title>Mąż na Godziny — Premium</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Arial', sans-serif; background:#f5f5f5; color:#222; line-height:1.6; scroll-behavior: smooth;}
+  a { text-decoration:none; }
+  header { background:#1e88e5; color:#fff; padding:25px; text-align:center; font-size:32px; font-weight:bold; position:sticky; top:0; z-index:100; box-shadow:0 4px 6px rgba(0,0,0,0.1);}
+  .hero { padding:50px 20px; text-align:center; background:#fff; margin:20px auto; border-radius:15px; box-shadow:0 2px 10px rgba(0,0,0,0.1);}
+  .hero h2 { font-size:28px; margin-bottom:15px; }
+  .hero p { font-size:18px; margin-bottom:20px; color:#555;}
+  .hero img { width:100%; max-width:600px; border-radius:12px; margin-top:15px; }
+  .btn { padding:12px 25px; background:#ffc107; border-radius:8px; font-size:18px; font-weight:bold; color:#222; display:inline-block; margin:10px 5px; transition: all 0.3s ease;}
+  .btn:hover { background:#ffd740; color:#000; transform: translateY(-3px); }
+  .services { padding:20px; display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; margin:20px; }
+  .card { background:#fff; padding:20px; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1); text-align:center; font-size:18px; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor:pointer; }
+  .card:hover { transform: scale(1.05); box-shadow:0 6px 18px rgba(0,0,0,0.25); }
+  .fade-in { opacity:0; animation: fadeIn 1s forwards; }
+  .slide-up { transform:translateY(25px); opacity:0; animation: slideUp 1s forwards; }
+  @keyframes fadeIn { to { opacity:1; } }
+  @keyframes slideUp { to { transform:translateY(0); opacity:1; } }
+  .map-section { padding:20px; text-align:center; }
+  iframe { border:0; border-radius:12px; margin-top:10px; }
+  .testimonials { padding:30px; text-align:center; }
+  .testimonial-slider { display:flex; overflow-x:auto; gap:20px; scroll-snap-type:x mandatory; }
+  .testimonial-slider::-webkit-scrollbar { display:none; }
+  .testimonial { flex:0 0 300px; scroll-snap-align:center; background:#fff; padding:20px; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,0.1); font-size:18px; transition: transform 0.3s ease; }
+  .testimonial:hover { transform: scale(1.05); }
+  .modal { display:none; position:fixed; z-index:200; left:0; top:0; width:100%; height:100%; overflow:auto; background: rgba(0,0,0,0.6); }
+  .modal-content { background:#fff; margin:10% auto; padding:20px; border-radius:12px; width:90%; max-width:500px; text-align:center; position:relative;}
+  .close { position:absolute; top:10px; right:15px; font-size:28px; font-weight:bold; cursor:pointer; }
+  .close:hover { color:#1e88e5; }
+  footer { background:#1e88e5; color:#fff; text-align:center; padding:20px; margin-top:30px; font-size:16px; }
+  #topBtn { display:none; position:fixed; bottom:30px; right:30px; z-index:99; background:#ffc107; color:#222; padding:12px 18px; border:none; border-radius:50px; font-size:18px; cursor:pointer; transition: all 0.3s ease;}
+  #topBtn:hover { background:#ffd740; transform:translateY(-3px); }
+  @media (max-width:600px) { header { font-size:24px; padding:15px; } .hero h2 { font-size:22px; } .btn { font-size:16px; padding:10px 20px; } }
+</style>
+</head>
+<body>
+
+<header>Mąż na Godziny</header>
+
+<section class="hero fade-in">
+  <h2>Profesjonalna pomoc domowa • Szybko • Tanio • Solidnie</h2>
+  <p>Naprawy, montaż, instalacje, drobne prace. Zaufaj doświadczeniu!</p>
+  <img src="https://source.unsplash.com/600x400/?tools,repair,home" alt="Małe naprawy">
+  <br>
+  <a href="#kontakt" class="btn">📞 Skontaktuj się ze mną</a>
+  <a href="https://wa.me/48572413556" class="btn" target="_blank">💬 WhatsApp</a>
+</section>
+
+<section class="services slide-up" id="services-container"></section>
+
+<section class="map-section fade-in">
+  <h2>Działamy w Świebodzinie i okolicach</h2>
+  <p>Profesjonalne usługi domowe na terenie miasta i pobliskich miejscowości.</p>
+  <iframe src="https://maps.google.com/maps?q=Świebodzin&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300"></iframe>
+</section>
+
+<section class="testimonials">
+  <h2 class="fade-in">Opinie Klientów</h2>
+  <div class="testimonial-slider">
+    <div class="testimonial fade-in">⭐⭐⭐⭐⭐<br>"Szybka i profesjonalna naprawa. Polecam w 100%!"<br>— Piotr K.</div>
+    <div class="testimonial fade-in">⭐⭐⭐⭐⭐<br>"Montaż mebli wykonany perfekcyjnie i bardzo szybko."<br>— Anna M.</div>
+    <div class="testimonial fade-in">⭐⭐⭐⭐⭐<br>"Najlepszy fachowiec w okolicy! Zawsze można liczyć."<br>— Tomasz L.</div>
+  </div>
+</section>
+
+<footer id="kontakt">
+  Kontakt: +48 572 413 556 • Dostępny 24/7
+</footer>
+
+<button id="topBtn" onclick="topFunction()">⬆️</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const services = [
+    { id:'modal1', title:'🔧 Naprawy domowe', img:'https://source.unsplash.com/500x300/?home,tools,repair', desc:'Profesjonalne naprawy w domu. Szybko, tanio i solidnie!' },
+    { id:'modal2', title:'🪛 Montaż mebli', img:'https://source.unsplash.com/500x300/?furniture,assembly', desc:'Profesjonalny montaż mebli w domu lub biurze. Solidnie i szybko!' },
+    { id:'modal3', title:'💡 Instalacje elektryczne', img:'https://source.unsplash.com/500x300/?electrician,electric', desc:'Profesjonalne instalacje elektryczne i naprawy w domu.' },
+    { id:'modal4', title:'🚰 Prace hydrauliczne', img:'https://source.unsplash.com/500x300/?plumbing', desc:'Szybkie i solidne prace hydrauliczne w domu i mieszkaniu.' },
+    { id:'modal5', title:'🏠 Prace remontowe', img:'https://source.unsplash.com/500x300/?renovation,home', desc:'Kompleksowe prace remontowe, od małych napraw po duże projekty.' }
+  ];
+
+  const container = document.getElementById('services-container');
+  services.forEach(s => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.textContent = s.title;
+    card.onclick = ()=> openModal(s.id);
+    container.appendChild(card);
+
+    const modal = document.createElement('div');
+    modal.id = s.id;
+    modal.className = 'modal';
+    modal.innerHTML = `<div class="modal-content">
+      <span class="close" onclick="closeModal('${s.id}')">&times;</span>
+      <h3>${s.title}</h3>
+      <img src="${s.img}" alt="${s.title}" style="width:100%; border-radius:12px; margin:10px 0;">
+      <p>${s.desc}</p>
+      <a href="tel:+48572413556" class="btn">📞 Zamów teraz</a>
+    </div>`;
+    document.body.appendChild(modal);
+  });
+
+  const fadeElements = document.querySelectorAll('.fade-in, .slide-up');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.2 });
+  fadeElements.forEach(el => observer.observe(el));
+});
+
+function openModal(id){ document.getElementById(id).style.display='block'; }
+function closeModal(id){ document.getElementById(id).style.display='none'; }
+window.onclick = function(event){ if(event.target.classList.contains('modal')) event.target.style.display='none'; }
+window.onscroll = ()=>{ const btn = document.getElementById("topBtn"); (document.body.scrollTop>300 || document.documentElement.scrollTop>300)? btn.style.display="block" : btn.style.display="none"; };
+function topFunction(){ window.scrollTo({top:0, behavior:'smooth'}); }
+</script>
+
+</body>
+</html>
